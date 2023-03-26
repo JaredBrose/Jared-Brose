@@ -1,0 +1,21 @@
+import smtplib
+
+# Set up email server
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login('your_email@gmail.com', 'your_password')
+
+# Set up email content
+subject = 'Doughnut Shop Promotion'
+body = 'Come visit our new doughnut shop!'
+message = f'Subject: {subject}\n\n{body}'
+
+# Set up list of users
+users = ['user1@example.com', 'user2@example.com', 'user3@example.com']
+
+# Send email to each user
+for user in users:
+    server.sendmail('your_email@gmail.com', user, message)
+
+# Close email server
+server.quit()
