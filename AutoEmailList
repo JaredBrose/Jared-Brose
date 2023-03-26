@@ -19,3 +19,13 @@ for user in users:
 
 # Close email server
 server.quit()
+
+This code uses the smtplib library to send an email to each user in the users list. You will need to replace your_email@gmail.com and your_password with your own Gmail address and password.
+
+As for making phone calls, there are several APIs and services available that can be used to make automated phone calls from a program. One such service is Twilio, which provides a Python library for making phone calls. Here is an example of how you could use Twilio to make a phone call to a user:
+
+from twilio.rest import Client
+
+# Set up Twilio client
+account_sid = 'your_account_sid'
+auth_token = '
